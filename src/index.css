@@ -3,30 +3,36 @@
 @tailwind utilities;
 
 @layer base {
+  /* Style global de l'HTML */
   html {
     scroll-behavior: smooth;
   }
   
+  /* Style global du corps de la page */
   body {
-    @apply bg-black text-white;
+    @apply bg-white text-black; /* Fond blanc avec texte noir */
   }
 }
 
 @layer components {
+  /* Espacement par défaut pour les sections */
   .section-padding {
-    @apply py-20 px-4;
+    @apply py-20 px-4; /* Padding vertical de 20 et horizontal de 4 */
   }
 }
 
 @layer utilities {
+  /* Cacher la barre de défilement sur les navigateurs basés sur Webkit */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
   
+  /* Type de défilement horizontal avec snaps */
   .snap-x {
     scroll-snap-type: x mandatory;
   }
   
+  /* Alignement de départ pour les éléments dans le snap */
   .snap-start {
     scroll-snap-align: start;
   }

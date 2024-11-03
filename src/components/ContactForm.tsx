@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,13 +10,34 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
+
+    // Paramètres d'EmailJS
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        'service_y2w8ut5',      // Remplacez par votre Service ID
+        'template_0c0to7d',     // Remplacez par votre Template ID
+        templateParams,
+        '-C458rclonC-ySIGk'          // Remplacez par votre User ID
+      )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Your message has been sent!');
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+        alert('Failed to send your message. Please try again later.');
+      });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value
     }));
@@ -26,7 +48,7 @@ export default function ContactForm() {
       <div className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
-            Name
+            Nom
           </label>
           <input
             type="text"
@@ -73,7 +95,7 @@ export default function ContactForm() {
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
         >
-          Send Message
+          Envoyer
         </button>
       </div>
     </form>
