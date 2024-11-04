@@ -4,20 +4,30 @@
 
 @layer base {
   /* Style global de l'HTML */
-  html {
+  html,
+  body {
+    margin: 0; /* Réinitialise les marges */
+    padding: 0; /* Réinitialise les paddings */
+    @apply w-full; /* Assure la pleine largeur */
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Évite le défilement horizontal */
   }
   
   /* Style global du corps de la page */
   body {
-    @apply bg-white text-black; /* Fond blanc avec texte noir */
+    @apply bg-white text-black;
+  }
+
+  /* Conteneur global */
+  .container {
+    @apply w-full max-w-7xl mx-auto px-4 md:px-8; /* Assure que le contenu est bien centré et adaptatif */
   }
 }
 
 @layer components {
   /* Espacement par défaut pour les sections */
   .section-padding {
-    @apply py-20 px-4; /* Padding vertical de 20 et horizontal de 4 */
+    @apply py-20 px-2 md:px-4; /* Réduit le padding horizontal sur mobile */
   }
 }
 
@@ -29,7 +39,6 @@
     -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
     scrollbar-width: none; /* Pour Firefox */
   }
-
   
   /* Type de défilement horizontal avec snaps */
   .snap-x {
