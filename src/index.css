@@ -22,10 +22,14 @@
 }
 
 @layer utilities {
-  /* Cacher la barre de défilement sur les navigateurs basés sur Webkit */
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+    display: none; /* Pour les navigateurs basés sur Webkit (Chrome, Safari) */
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+    scrollbar-width: none; /* Pour Firefox */
+  }
+
   
   /* Type de défilement horizontal avec snaps */
   .snap-x {

@@ -70,7 +70,7 @@ export default function Projects() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -600 : 600; // Augmenter la quantité de défilement pour s'adapter à la nouvelle taille des cartes
+      const scrollAmount = direction === 'left' ? -600 : 600; 
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
@@ -79,9 +79,9 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-2">
-      <div className="max-w-7xl mx-auto"> {/* Augmenter max-w pour une plus grande zone de visualisation */}
-        <h2 className="text-2xl font-bold mb-12 text-center">WORK</h2>
+    <section id="projects" className="py-20 px-4 md:px-2">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-bold mb-8 md:mb-12 text-center">WORK</h2>
         
         <div className="relative group">
           <button
@@ -89,19 +89,19 @@ export default function Projects() {
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-1/2"
             aria-label="Scroll left"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} /> {/* Réduit la taille de l'icône */}
           </button>
 
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory scrollbar-hide"
+            className="flex overflow-x-auto gap-4 md:gap-6 pb-4 snap-x snap-mandatory scrollbar-hide"
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none'
             }}
           >
             {projects.map((project, index) => (
-              <div key={index} className="flex-none w-[400px] md:w-[500px] snap-start"> {/* Augmenter la largeur */}
+              <div key={index} className="flex-none w-[250px] md:w-[400px] snap-start"> {/* Réduit la largeur des cartes sur mobile */}
                 <ProjectCard {...project} />
               </div>
             ))}
@@ -112,7 +112,7 @@ export default function Projects() {
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-x-1/2"
             aria-label="Scroll right"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={20} /> {/* Réduit la taille de l'icône */}
           </button>
         </div>
       </div>

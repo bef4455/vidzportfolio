@@ -2,12 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-interface NavbarProps {
-  isMenuOpen: boolean;
-  setIsMenuOpen: (isOpen: boolean) => void;
-}
-
-function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
+function Navbar({ isMenuOpen, setIsMenuOpen }) {
   const navigate = useNavigate();
   const [navigateTo, setNavigateTo] = useState<string | null>(null);
 
@@ -32,13 +27,21 @@ function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-black via-gray-800 to-black backdrop-blur-sm shadow-md transition-all duration-300">
+    <nav className="fixed top-0 left-0 w-full z-[200] bg-gradient-to-r from-black via-gray-800 to-black backdrop-blur-sm shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="/" className="text-2xl font-bold flex items-center space-x-2">
-            <img src="/logo.svg" alt="B4_LAB logo" className="h-10 w-auto" />
+          <a href="/" className="text-xl md:text-2xl font-bold flex items-center space-x-2">
+            <img src="/logo.svg" alt="B4_LAB logo" className="h-8 md:h-10 w-auto" />
             <span className="hover:text-blue-500 transition-colors">B4_LAB</span>
           </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden z-[300]" // S'assurer que le bouton est bien visible
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -55,28 +58,23 @@ function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
               CONTACT
             </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden px-4 pt-2 pb-4 space-y-4">
+          <div
+            className="fixed inset-0 w-full h-full z-[250] bg-black opacity-95 backdrop-blur-lg px-4 pt-20 pb-4 space-y-6 transition-opacity duration-300"
+            style={{ backdropFilter: 'blur(10px)' }} // Pour renforcer l'effet de flou
+          >
             <button
               onClick={handleProjectsClick}
-              className="block text-gray-300 hover:text-white transition-transform duration-300 transform hover:-translate-y-1"
+              className="block w-full text-left text-lg text-gray-300 font-semibold transition-transform duration-300 transform hover:text-white hover:bg-blue-600 p-4 rounded-lg"
             >
               My Projects
             </button>
             <button
               onClick={handleContactClick}
-              className="block text-gray-300 hover:text-white transition-transform duration-300 transform hover:-translate-y-1"
+              className="block w-full text-left text-lg text-gray-300 font-semibold transition-transform duration-300 transform hover:text-white hover:bg-blue-600 p-4 rounded-lg"
             >
               CONTACT
             </button>
