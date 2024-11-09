@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Hero({ isMenuOpen }) {
+interface HeroProps {
+  isMenuOpen: boolean;
+}
+
+export default function Hero({ isMenuOpen }: HeroProps) {
   const [isTextVisible, setIsTextVisible] = useState(true);
 
   useEffect(() => {

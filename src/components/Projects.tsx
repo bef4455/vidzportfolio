@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import ProjectCard from './ProjectCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -7,61 +7,61 @@ const projects = [
     title: "Showreels",
     category: "Lifestyle",
     thumbnail: "https://img.youtube.com/vi/SW7VaYFA9LY/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/SW7VaYFA9LY"
+    videoUrl: "https://www.youtube.com/embed/SW7VaYFA9LY"
   },
   {
     title: "HBC GAGNY VS CSM Finances - 2024",
     category: "Sport",
     thumbnail: "https://img.youtube.com/vi/KGaXZSxRO5Q/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/KGaXZSxRO5Q"
+    videoUrl: "https://www.youtube.com/embed/KGaXZSxRO5Q"
   },
   {
     title: "THAILAND 24' - iPhone 11 Pro w/ Dji Osmo mobile",
     category: "Travel",
     thumbnail: "https://img.youtube.com/vi/oAkj9qmHPPs/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/oAkj9qmHPPs"
+    videoUrl: "https://www.youtube.com/embed/oAkj9qmHPPs"
   },
   {
     title: "Donna La Mulatta - No me importa - iPhone 11 Pro w/ Dji Osmo mobile",
     category: "Music Video",
     thumbnail: "https://img.youtube.com/vi/ejrMUCztbVM/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/ejrMUCztbVM"
+    videoUrl: "https://www.youtube.com/embed/ejrMUCztbVM"
   },
   {
     title: "Quentin Pontonier - Interview (Cyclones Magazine)",
     category: "Documentary",
     thumbnail: "https://img.youtube.com/vi/sZ8aajiBgXI/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/sZ8aajiBgXI"
+    videoUrl: "https://www.youtube.com/embed/sZ8aajiBgXI"
   },
   {
     title: "Gallery Art",
     category: "Lifestyle Art",
     thumbnail: "https://img.youtube.com/vi/mbUxkdD1Ppo/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/mbUxkdD1Ppo"
+    videoUrl: "https://www.youtube.com/embed/mbUxkdD1Ppo"
   },
   {
     title: "BMW E30 Ride",
     category: "Lifestyle",
     thumbnail: "https://img.youtube.com/vi/BfaxAcqzkTI/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/BfaxAcqzkTI"
+    videoUrl: "https://www.youtube.com/embed/BfaxAcqzkTI"
   },
   {
     title: "Short Vietnam 2023",
     category: "Travel",
     thumbnail: "https://img.youtube.com/vi/dRRcA5xVhYk/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/dRRcA5xVhYk"
+    videoUrl: "https://www.youtube.com/embed/dRRcA5xVhYk"
   },
   {
     title: "Parifornie III",
     category: "Commercial",
     thumbnail: "https://img.youtube.com/vi/tqyyYQ60NbA/maxresdefault.jpg",
-    videoUrl: "https://youtu.be/tqyyYQ60NbA"
+    videoUrl: "https://www.youtube.com/embed/tqyyYQ60NbA"
   },
   {
     title: "Izzyfix Anniversaire",
     category: "Commercial",
     thumbnail: "https://img.youtube.com/vi/OXWnIb4azjc/maxresdefault.jpg",
-    videoUrl: "https://youtube.com/shorts/OXWnIb4azjc"
+    videoUrl: "https://www.youtube.com/embed/OXWnIb4azjc"
   }
 ];
 

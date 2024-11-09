@@ -10,8 +10,11 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, category, thumbnail, videoUrl }: ProjectCardProps) {
+  // Encode le titre de la vidéo pour éviter les problèmes de caractères spéciaux
+  const encodedTitle = encodeURIComponent(title);
+
   return (
-    <Link to={`/video/${title}`} state={{ videoUrl, title, category }}>
+    <Link to={`/video/${encodedTitle}`} state={{ videoUrl, title, category }}>
       <div className="group relative overflow-hidden rounded-lg cursor-pointer">
         <div className="aspect-video w-full">
           <img

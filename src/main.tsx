@@ -5,12 +5,17 @@ import App from './App';
 import './index.css';
 import { ScrollProvider } from './components/ScrollContext';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ScrollProvider>
-        <App />
-      </ScrollProvider>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <ScrollProvider>
+          <App />
+        </ScrollProvider>
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+} else {
+  console.error('Root element not found');
+}

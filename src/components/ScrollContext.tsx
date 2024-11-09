@@ -1,15 +1,13 @@
 import React, { createContext, useState, ReactNode } from 'react';
 
-// Définit le type pour le contexte
 interface ScrollContextType {
-  scrollToSection: string | null;
-  setScrollToSection: (section: string | null) => void;
+  targetSection: string | null;
+  setTargetSection: (section: string | null) => void;
 }
 
-// Définit le contexte avec une valeur par défaut
 export const ScrollContext = createContext<ScrollContextType>({
-  scrollToSection: null,
-  setScrollToSection: () => {},
+  targetSection: null,
+  setTargetSection: () => {},
 });
 
 interface ScrollProviderProps {
@@ -17,10 +15,10 @@ interface ScrollProviderProps {
 }
 
 export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
-  const [scrollToSection, setScrollToSection] = useState<string | null>(null);
+  const [targetSection, setTargetSection] = useState<string | null>(null);
 
   return (
-    <ScrollContext.Provider value={{ scrollToSection, setScrollToSection }}>
+    <ScrollContext.Provider value={{ targetSection, setTargetSection }}>
       {children}
     </ScrollContext.Provider>
   );

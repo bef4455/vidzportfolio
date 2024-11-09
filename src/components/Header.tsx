@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '/B4LAB.jpg';
 
-export default function Header() {
+export default function Header({ setScrollTarget }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,6 +14,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavigationClick = (target) => {
+    setIsMenuOpen(false);
+    console.log(`Setting scrollTarget to: ${target}`);
+    setScrollTarget(target);
+  };
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -23,8 +29,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo uniquement, sans texte "B4_LAB" */}
-          <a href="#" className="flex items-center">
-            <img src={logo} alt="B4_LAB logo" className="h-12 w-auto" /> {/* Adjust height/width as needed */}
+          <a
+            href="#"
+            className="flex items-center"
+            onClick={() => handleNavigationClick('home')}
+          >
+            <img src={logo} alt="B4_LAB logo" className="h-12 w-auto" />
           </a>
 
           {/* Mobile menu button */}
@@ -38,13 +48,13 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex space-x-8">
             <button
-              onClick={() => (window.location.href = "#projects")}
+              onClick={() => handleNavigationClick('projects')}
               className="box text-gray-300 font-semibold"
             >
               Work
             </button>
             <button
-              onClick={() => (window.location.href = "#contact")}
+              onClick={() => handleNavigationClick('contact')}
               className="box text-gray-300 font-semibold"
             >
               Contact
@@ -57,13 +67,13 @@ export default function Header() {
           <nav className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
               <button
-                onClick={() => (window.location.href = "#projects")}
+                onClick={() => handleNavigationClick('projects')}
                 className="box text-gray-300 font-semibold"
               >
                 Projects
               </button>
               <button
-                onClick={() => (window.location.href = "#contact")}
+                onClick={() => handleNavigationClick('contact')}
                 className="box text-gray-300 font-semibold"
               >
                 Contact
