@@ -12,12 +12,14 @@ export default function Footer() {
         {/* Icônes des réseaux sociaux */}
         <div className="flex items-center space-x-4">
           <a href="https://www.instagram.com/b4.lab/" target="_blank" rel="noopener noreferrer">
-            {/* Utilisation directe du chemin public pour le SVG */}
             <img src="/1298747_instagram_brand_logo_social media_icon.svg" alt="Instagram" className="h-5 w-5 md:h-6 md:w-6" />
           </a>
           <a href="https://www.youtube.com/channel/UCqMCtzsEvRMl9nTAdB3VgGw" target="_blank" rel="noopener noreferrer">
-            {/* Utilisation directe du chemin public pour le SVG */}
             <img src="/317714_video_youtube_icon.svg" alt="YouTube" className="h-6 w-6 md:h-7 md:w-7" />
+          </a>
+          {/* Bouton Fiverr */}
+          <a href="https://fr.fiverr.com/b4_lab" target="_blank" rel="noopener noreferrer">
+            <img src="/fiverr-1.svg" alt="Fiverr" className="h-6 w-6 md:h-7 md:w-7" />
           </a>
         </div>
       </div>

@@ -6,8 +6,8 @@ const projects = [
   {
     title: "Showreels",
     category: "Lifestyle",
-    thumbnail: "https://img.youtube.com/vi/SW7VaYFA9LY/maxresdefault.jpg",
-    videoUrl: "https://www.youtube.com/embed/SW7VaYFA9LY"
+    thumbnail: "https://img.youtube.com/vi/5F0AWGXQZzQ/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/5F0AWGXQZzQ "
   },
   {
     title: "HBC GAGNY VS CSM Finances - 2024",
