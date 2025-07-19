@@ -4,13 +4,31 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
   {
+    title: "WORKSHOP OMBRAGE X JORDAN 2025",
+    category: "BTS",
+    thumbnail: "https://img.youtube.com/vi/akDz9P-5JUE/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/akDz9P-5JUE"
+  },  
+  {
+    title: "LumJR X New Era 2025",
+    category: "Commercial",
+    thumbnail: "https://img.youtube.com/vi/2gjq7A5MDQ0/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/2gjq7A5MDQ0"
+  }, 
+  {
+    title: "MAROCCO 2025 - Travel Film",
+    category: "Travel",
+    thumbnail: "https://img.youtube.com/vi/vYffx8VaV6w/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/vYffx8VaV6w"
+  },
+  {
     title: "Showreels",
     category: "Lifestyle",
     thumbnail: "https://img.youtube.com/vi/V64uxfd4_zY/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/V64uxfd4_zY"
   },
   {
-    title: "HBC GAGNY VS CSM Finances - 2024",
+    title: "HBC GAGNY VS CSM Finances 2024 - iPhone 11 Pro",
     category: "Sport",
     thumbnail: "https://img.youtube.com/vi/KGaXZSxRO5Q/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/KGaXZSxRO5Q"

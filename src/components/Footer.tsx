@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 space-y-4 md:space-y-0">
         {/* Texte copyright */}
         <p className="text-xs md:text-sm text-center md:text-left">
-          &copy; 2024 B4_Lab. All rights reserved.
+          &copy; 2025 B4_Lab. All rights reserved.
         </p>
 
         {/* Icônes des réseaux sociaux */}
