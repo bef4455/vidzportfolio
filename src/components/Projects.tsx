@@ -4,79 +4,79 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
   {
-    title: "WORKSHOP OMBRAGE X JORDAN 2025",
+    title: "WORKSHOP OMBRAGE X JORDAN | 2025",
     category: "BTS",
     thumbnail: "https://img.youtube.com/vi/akDz9P-5JUE/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/akDz9P-5JUE"
   },  
   {
-    title: "LumJR X New Era 2025",
+    title: "LumJR X New Era | 2025",
     category: "Commercial",
     thumbnail: "https://img.youtube.com/vi/2gjq7A5MDQ0/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/2gjq7A5MDQ0"
   }, 
   {
-    title: "MAROCCO 2025 - Travel Film",
+    title: "MAROCCO - Travel Film | 2025",
     category: "Travel",
     thumbnail: "https://img.youtube.com/vi/vYffx8VaV6w/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/vYffx8VaV6w"
   },
   {
-    title: "Showreels",
+    title: "Showreels | 2024",
     category: "Lifestyle",
     thumbnail: "https://img.youtube.com/vi/V64uxfd4_zY/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/V64uxfd4_zY"
   },
   {
-    title: "HBC GAGNY VS CSM Finances 2024 - iPhone 11 Pro",
+    title: "HBC GAGNY VS CSM Finances - iPhone 11 Pro | 2024",
     category: "Sport",
     thumbnail: "https://img.youtube.com/vi/KGaXZSxRO5Q/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/KGaXZSxRO5Q"
   },
   {
-    title: "THAILAND 24' - iPhone 11 Pro w/ Dji Osmo mobile",
+    title: "THAILAND' - iPhone 11 Pro w/ Dji Osmo mobile | 2024",
     category: "Travel",
     thumbnail: "https://img.youtube.com/vi/oAkj9qmHPPs/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/oAkj9qmHPPs"
   },
   {
-    title: "Donna La Mulatta - No me importa - iPhone 11 Pro w/ Dji Osmo mobile",
+    title: "Donna La Mulatta - No me importa - iPhone 11 Pro w/ Dji Osmo mobile | 2022",
     category: "Music Video",
     thumbnail: "https://img.youtube.com/vi/ejrMUCztbVM/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/ejrMUCztbVM"
   },
   {
-    title: "Quentin Pontonier - Interview (Cyclones Magazine)",
+    title: "Quentin Pontonier - Interview (Cyclones Magazine) | 2016",
     category: "Documentary",
     thumbnail: "https://img.youtube.com/vi/sZ8aajiBgXI/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/sZ8aajiBgXI"
   },
   {
-    title: "Gallery Art",
+    title: "Gallery Art | 2020",
     category: "Lifestyle Art",
     thumbnail: "https://img.youtube.com/vi/mbUxkdD1Ppo/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/mbUxkdD1Ppo"
   },
   {
-    title: "BMW E30 Ride",
+    title: "BMW E30 Ride | 2020",
     category: "Lifestyle",
     thumbnail: "https://img.youtube.com/vi/BfaxAcqzkTI/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/BfaxAcqzkTI"
   },
   {
-    title: "Short Vietnam 2023",
+    title: "Short Vietnam | 2023",
     category: "Travel",
     thumbnail: "https://img.youtube.com/vi/dRRcA5xVhYk/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/dRRcA5xVhYk"
   },
   {
-    title: "Parifornie III",
+    title: "Parifornie III | 2016",
     category: "Commercial",
     thumbnail: "https://img.youtube.com/vi/tqyyYQ60NbA/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/tqyyYQ60NbA"
   },
   {
-    title: "Izzyfix Anniversaire",
+    title: "Izzyfix Anniversaire | 2020",
     category: "Commercial",
     thumbnail: "https://img.youtube.com/vi/OXWnIb4azjc/maxresdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/OXWnIb4azjc"
